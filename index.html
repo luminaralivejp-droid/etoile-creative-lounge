@@ -1,20 +1,41 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  color: #ffffff;
-  line-height: 1.6;
-  min-height: 100vh;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Étoile Creative Lounge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  /* AI background placeholder */
-  background-image:
-    linear-gradient(
-      rgba(15, 15, 20, 0.75),
-      rgba(15, 15, 20, 0.75)
-    ),
-    url("background.jpg");
+<body>
 
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  <!-- VIDEO BACKGROUND -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="assets/etoile-loop.mp4" type="video/mp4">
+  </video>
 
-  padding: 2rem;
-}
+  <!-- OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- CONTENT -->
+  <header>
+    <h1>ÉTOILE</h1>
+    <h2>Creative Lounge</h2>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="philosophy.html">Philosophy</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="safety.html">Safety</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <p>
+      A discreet, safety-first creative environment for music and digital talent.
+    </p>
+  </main>
+
+</body>
+</html>
