@@ -1,0 +1,31 @@
+<svg width="300" height="300" viewBox="0 0 300 300"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="300" height="300" fill="#0f0f14"/>
+
+  <!-- Star -->
+  <polygon points="150,40 165,135 260,150 165,165 150,260 135,165 40,150 135,135"
+           fill="none"
+           stroke="#d6b48c"
+           stroke-width="4"/>
+
+  <!-- Text -->
+  <text x="150" y="190"
+        font-size="24"
+        letter-spacing="4"
+        fill="#ffffff"
+        text-anchor="middle"
+        font-family="Helvetica, Arial, sans-serif">
+    ÉTOILE
+  </text>
+
+  <text x="150" y="220"
+        font-size="12"
+        letter-spacing="2"
+        fill="#aaaaaa"
+        text-anchor="middle"
+        font-family="Helvetica, Arial, sans-serif">
+    CREATIVE LOUNGE
+  </text>
+
+</svg>
