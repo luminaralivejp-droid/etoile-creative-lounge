@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Étoile Creative Lounge</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>ÉTOILE — A Place for VSingers</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<body>
 
-  <!-- VIDEO BACKGROUND -->
-<video autoplay muted loop playsinline id="bgVideo">
-  <source src="assets/etoile-loop.mp4" type="video/mp4">
-</video>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="assets/etoile-loop.mp4" type="video/mp4">
+  </video>
 
-<!-- FALLBACK IMAGE -->
-<div class="video-fallback"></div>
+  <!-- Fallback Image -->
+  <div class="video-fallback"></div>
 
-<!-- OVERLAY -->
-<div class="overlay"></div>
+  <!-- Dark Overlay -->
+  <div class="overlay"></div>
 
   <!-- CONTENT -->
-  <header>
-  <img src="logo.svg" alt="Étoile Creative Lounge Logo" class="logo">
-</header>
+  <div class="content">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="philosophy.html">Philosophy</a>
-    <a href="recruitment.html">Recruitment</a>
-    <a href="safety.html">Safety</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <header>
+      <img src="logo.svg" alt="ÉTOILE Logo" class="logo">
+    </header>
 
-  <main>
-    <p>
-      A discreet, safety-first creative environment for music and digital talent.
-    </p>
-  </main>
+    <main>
+      <h1>A Place for VSingers</h1>
+      <p class="tagline">
+        Where voices come first.<br>
+        Where creation is safe.<br>
+        Where sound leads.
+      </p>
 
-</body><!-- VIDEO BACKGROUND -->
-<video autoplay muted loop playsinline id="bgVideo">
-  <source src="assets/etoile-loop.mp4" type="video/mp4">
-</video>
+      <section>
+        <h2>About</h2>
+        <p>
+          ÉTOILE is a VSinger-first creative agency and space.
+          Not a VTuber factory. Not idol management.
+          A music-centered environment built around voice, autonomy,
+          and long-term artistic health.
+        </p>
+      </section>
 
-<!-- FALLBACK IMAGE -->
-<div class="video-fallback"></div>
+      <section>
+        <h2>Who We Support</h2>
+        <ul>
+          <li>VSingers (core focus)</li>
+          <li>Idols whose work centers on singing</li>
+          <li>VTubers only when music is primary</li>
+        </ul>
+      </section>
 
-<!-- DARK OVERLAY -->
-<div class="overlay"></div>
+      <section>
+        <h2>Appreciate a Voice</h2>
+        <form>
+          <input type="text" placeholder="Name (optional)">
+          <input type="email" placeholder="Email (optional)">
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p class="note">
+          This is not a recruitment form.
+        </p>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
 </html>
