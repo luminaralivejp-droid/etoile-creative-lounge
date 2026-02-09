@@ -13,7 +13,17 @@
   <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => {
+      el.style.display = 'none';
+    });
+    document.querySelector('.lang-' + lang).style.display = 'block';
+  }
 
+  // Default language
+  setLang('en');
+</script>
 <body>
 
   <!-- Background Video -->
