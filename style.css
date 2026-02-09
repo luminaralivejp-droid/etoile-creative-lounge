@@ -113,3 +113,22 @@ button {
     font-size: 2rem;
   }
 }
+.lang-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.lang-switch button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  margin-left: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.lang {
+  display: none;
+}
