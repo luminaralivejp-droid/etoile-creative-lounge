@@ -1,56 +1,48 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: #0b0b0f;
-  color: #f5f5f5;
+  color: white;
+  background: black;
 }
 
+/* Background Video */
 .bg-video {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -2;
 }
 
+/* Overlay */
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10,10,15,0.65);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
+/* Header */
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
 }
 
 .logo {
   height: 48px;
 }
 
-.logo-link:hover {
-  opacity: 0.85;
-}
-
-nav {
-  padding: 0 1.5rem;
-}
-
 nav a {
+  margin-right: 1.5rem;
   color: white;
-  margin-right: 1rem;
   text-decoration: none;
   opacity: 0.85;
 }
@@ -59,54 +51,65 @@ nav a:hover {
   opacity: 1;
 }
 
-main {
-  max-width: 980px;
-  margin: auto;
-  padding: 3rem 1.5rem;
-}
-
-h1, h2 {
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
-.tagline {
-  font-size: 1.1rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.9;
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-input, textarea {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 10px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-}
-
-button {
+.lang-switch button {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid white;
   color: white;
-  padding: 10px 18px;
+  padding: 0.4rem 0.8rem;
+  margin-left: 0.5rem;
   cursor: pointer;
 }
 
-button:hover {
-  background: rgba(255,255,255,0.05);
+/* Hero */
+.hero {
+  padding: 6rem 2rem 3rem;
+  max-width: 700px;
 }
 
-.note {
-  font-size: 0.85rem;
-  opacity: 0.7;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.lang-switch button {
-  margin-left: 6px;
-  font-size: 0.75rem;
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* About */
+.about {
+  padding: 3rem 2rem;
+  max-width: 700px;
+}
+
+.about h2 {
+  margin-bottom: 1rem;
+}
+
+/* Form */
+.form-section {
+  padding: 3rem 2rem 5rem;
+  max-width: 700px;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section input,
+.form-section textarea {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.form-section button {
+  padding: 0.8rem;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
 }
