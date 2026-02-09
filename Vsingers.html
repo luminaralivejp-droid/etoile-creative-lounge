@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>VSingers — ÉTOILE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ÉTOILE Creative Lounge</title>
 
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.svg">
@@ -11,34 +11,79 @@
 
 <body>
 
-<header>
-  <a href="index.html" class="logo-link">
-    <img src="logo.svg" alt="ÉTOILE Logo" class="logo">
-  </a>
-</header>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="assets/bg-video.mp4" type="video/mp4">
+  </video>
 
-<main>
-  <h1>VSingers</h1>
-  <p>
-    Artists whose work centers on voice, music, and expression.
-  </p>
+  <!-- Dark Overlay -->
+  <div class="overlay"></div>
 
-  <section>
-    <h2>Our Artists</h2>
-    <p>
-      Each voice is supported as an individual —
-      never as a product.
-    </p>
-  </section>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="logo.svg" alt="ÉTOILE Logo" class="logo">
+    </a>
 
-  <section>
-    <h2>所属アーティスト</h2>
-    <p>
-      一人ひとりの声と表現を尊重し、
-      表現者として支援します。
-    </p>
-  </section>
-</main>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#vsingers">VSingers</a>
+    </nav>
+
+    <div class="lang-switch">
+      <button onclick="switchLang('en')">EN</button>
+      <button onclick="switchLang('jp')">日本語</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="home">
+    <section class="hero">
+      <h1 id="hero-title"></h1>
+      <p id="hero-sub"></p>
+    </section>
+
+    <section class="about">
+      <h2 id="about-title"></h2>
+      <p id="about-text"></p>
+    </section>
+
+    <section class="form">
+      <h2>Interest & Appreciation</h2>
+      <form>
+        <input type="text" placeholder="Name (optional)">
+        <textarea placeholder="Your message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Language Script -->
+  <script>
+    const content = {
+      en: {
+        heroTitle: "Where Voice Is Respected",
+        heroSub: "A private creative house for VSingers. Built on trust, artistry, and care.",
+        aboutTitle: "About",
+        aboutText: "ÉTOILE is a VSinger-first creative house. We prioritize voice health, long-term artistry, and personal dignity over trends or speed."
+      },
+      jp: {
+        heroTitle: "声が尊重される場所",
+        heroSub: "VSingerのためのプライベート・クリエイティブハウス。",
+        aboutTitle: "概要",
+        aboutText: "ÉTOILEはVSingerを第一に考えるクリエイティブハウスです。声の健康と長期的な芸術性を最優先します。"
+      }
+    };
+
+    function switchLang(lang) {
+      document.getElementById("hero-title").innerText = content[lang].heroTitle;
+      document.getElementById("hero-sub").innerText = content[lang].heroSub;
+      document.getElementById("about-title").innerText = content[lang].aboutTitle;
+      document.getElementById("about-text").innerText = content[lang].aboutText;
+    }
+
+    switchLang('en');
+  </script>
 
 </body>
 </html>
