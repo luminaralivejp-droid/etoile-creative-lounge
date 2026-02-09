@@ -2,17 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ÉTOILE — A Place for VSingers</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Mobile -->
+  <title>ÉTOILE — VSinger Creative House</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg">
 </head>
+
+<body>
+
+<!-- Background Video -->
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="assets/bg-video.mp4" type="video/mp4">
+</video>
+
+<!-- Overlay -->
+<div class="overlay"></div>
+
+<header>
+  <a href="index.html" class="logo-link">
+    <img src="logo.svg" alt="ÉTOILE Logo" class="logo">
+  </a>
+
+  <div class="lang-switch">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('jp')">日本語</button>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="vsingers.html">VSingers</a>
+</nav>
+
+<main>
+
+  <!-- ENGLISH -->
+  <div class="lang lang-en">
+    <h1>Where Voice Is Respected</h1>
+    <p class="tagline">
+      A private creative house for VSingers.<br>
+      Built on trust, artistry, and care.
+    </p>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        ÉTOILE is a VSinger-first creative house.
+        We prioritize voice, health, and long-term artistry
+        over speed, trends, or volume.
+      </p>
+    </section>
+
+    <section>
+      <h2>Interest & Appreciation</h2>
+      <form>
+        <input type="text" placeholder="Name (optional)">
+        <input type="email" placeholder="Email (optional)">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <p class="note">
+        We do not rush voices.<br>
+        When the timing is right, we listen.
+      </p>
+    </section>
+  </div>
+
+  <!-- JAPANESE -->
+  <div class="lang lang-jp">
+    <h1>声を大切にする場所</h1>
+    <p class="tagline">
+      VSingerのためのプライベートな創作拠点。<br>
+      信頼、芸術性、そして安心を軸に。
+    </p>
+
+    <section>
+      <h2>この場所について</h2>
+      <p>
+        ÉTOILEは、VSingerを中心とした
+        クリエイティブハウスです。
+        声と音楽を最優先に考えています。
+      </p>
+    </section>
+
+    <section>
+      <h2>関心・応援メッセージ</h2>
+      <form>
+        <input type="text" placeholder="お名前（任意）">
+        <input type="email" placeholder="メール（任意）">
+        <textarea placeholder="メッセージ"></textarea>
+        <button type="submit">送信</button>
+      </form>
+
+      <p class="note">
+        声を急がせることはありません。<br>
+        適切なタイミングで、耳を傾けます。
+      </p>
+    </section>
+  </div>
+
+</main>
+
 <script>
   function setLang(lang) {
     document.querySelectorAll('.lang').forEach(el => {
@@ -20,90 +112,8 @@
     });
     document.querySelector('.lang-' + lang).style.display = 'block';
   }
-
-  // Default language
   setLang('en');
 </script>
-<body>
 
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline id="bgVideo">
-    <source src="assets/etoile-loop.mp4" type="video/mp4">
-  </video>
-
-  <!-- Fallback Image -->
-  <div class="video-fallback"></div>
-
-  <!-- Dark Overlay -->
-  <div class="overlay"></div>
-
-  <!-- CONTENT -->
-  <div class="content"><header>
-  <a href="index.html" class="logo-link">
-    <img src="logo.svg" alt="ÉTOILE Logo" class="logo">
-  </a>
-</header>
-<div class="lang-switch">
-  <button onclick="setLang('en')">EN</button>
-  <button onclick="setLang('jp')">日本語</button>
-</div>
-      <main>
-
-  <!-- ENGLISH -->
-  <div class="lang lang-en">
-    <h1>A Place for VSingers</h1>
-    <p class="tagline">
-      Where voices come first.<br>
-      Where creation is safe.<br>
-      Where sound leads.
-    </p>
-
-    <section>
-      <h2>About</h2>
-      <p>
-        ÉTOILE is a VSinger-first creative agency and space.
-        Not a VTuber factory. Not idol management.
-        A music-centered environment built around voice,
-        autonomy, and long-term artistic health.
-      </p>
-    </section>
-
-    <section>
-      <h2>Who We Support</h2>
-      <ul>
-        <li>VSingers (core focus)</li>
-        <li>Idols whose work centers on singing</li>
-        <li>VTubers only when music is primary</li>
-      </ul>
-    </section>
-  </div>
-
-  <!-- JAPANESE -->
-  <div class="lang lang-jp">
-    <h1>VSingerのための場所</h1>
-    <p class="tagline">
-      声を中心に。<br>
-      安全な創作環境。<br>
-      音楽が主役。
-    </p>
-
-    <section>
-      <h2>この場所について</h2>
-      <p>
-        ÉTOILEは、VSingerを中心としたクリエイティブエージェンシー兼スペースです。
-        VTuber事務所でも、アイドル管理でもありません。
-        声と音楽、そして創作の自由を大切にする環境を目指しています。
-      </p>
-    </section>
-
-    <section>
-      <h2>サポート対象</h2>
-      <ul>
-        <li>VSinger（主軸）</li>
-        <li>歌を中心とするアイドル</li>
-        <li>音楽活動が主なVTuber</li>
-      </ul>
-    </section>
-  </div>
-
-</main>
+</body>
+</html>
