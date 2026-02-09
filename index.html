@@ -1,119 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ÉTOILE — VSinger Creative House</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÉTOILE – VSinger Creative House</title>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
 
 <body>
 
-<!-- Background Video -->
-<video autoplay muted loop playsinline class="bg-video">
-  <source src="assets/bg-video.mp4" type="video/mp4">
-</video>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="assets/bg-video.mp4" type="video/mp4" />
+  </video>
 
-<!-- Overlay -->
-<div class="overlay"></div>
+  <!-- Dark Overlay -->
+  <div class="overlay"></div>
 
-<header>
-  <a href="index.html" class="logo-link">
-    <img src="logo.svg" alt="ÉTOILE Logo" class="logo">
-  </a>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="logo.svg" alt="ÉTOILE Logo" class="logo" />
+    </a>
 
-  <div class="lang-switch">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('jp')">日本語</button>
-  </div>
-</header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#vsingers">VSingers</a>
+    </nav>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="vsingers.html">VSingers</a>
-</nav>
+    <div class="lang-switch">
+      <button onclick="switchLang('en')">EN</button>
+      <button onclick="switchLang('jp')">日本語</button>
+    </div>
+  </header>
 
-<main>
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <h1 id="hero-title"></h1>
+    <p id="hero-sub"></p>
+  </main>
 
-  <!-- ENGLISH -->
-  <div class="lang lang-en">
-    <h1>Where Voice Is Respected</h1>
-    <p class="tagline">
-      A private creative house for VSingers.<br>
-      Built on trust, artistry, and care.
-    </p>
+  <!-- About -->
+  <section class="about">
+    <h2 id="about-title"></h2>
+    <p id="about-text"></p>
+  </section>
 
-    <section>
-      <h2>About</h2>
-      <p>
-        ÉTOILE is a VSinger-first creative house.
-        We prioritize voice, health, and long-term artistry
-        over speed, trends, or volume.
-      </p>
-    </section>
+  <!-- Interest / Appreciation Form -->
+  <section class="form-section">
+    <h2>Interest & Appreciation</h2>
+    <form>
+      <input type="text" placeholder="Name (optional)" />
+      <input type="email" placeholder="Email (optional)" />
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-    <section>
-      <h2>Interest & Appreciation</h2>
-      <form>
-        <input type="text" placeholder="Name (optional)">
-        <input type="email" placeholder="Email (optional)">
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-      </form>
+  <!-- Language Script -->
+  <script>
+    const content = {
+      en: {
+        heroTitle: "Where Voice Is Respected",
+        heroSub: "A private creative house for VSingers. Built on trust, artistry, and care.",
+        aboutTitle: "About",
+        aboutText:
+          "ÉTOILE is a VSinger-first creative house. We prioritize voice health, long-term artistry, and respect over speed, trends, or volume."
+      },
+      jp: {
+        heroTitle: "声が尊重される場所",
+        heroSub: "VSingerのためのプライベート・クリエイティブハウス。",
+        aboutTitle: "概要",
+        aboutText:
+          "ÉTOILEはVSingerを第一に考えるクリエイティブハウスです。声の健康と長期的な芸術性を大切にしています。"
+      }
+    };
 
-      <p class="note">
-        We do not rush voices.<br>
-        When the timing is right, we listen.
-      </p>
-    </section>
-  </div>
+    function switchLang(lang) {
+      document.getElementById("hero-title").innerText = content[lang].heroTitle;
+      document.getElementById("hero-sub").innerText = content[lang].heroSub;
+      document.getElementById("about-title").innerText = content[lang].aboutTitle;
+      document.getElementById("about-text").innerText = content[lang].aboutText;
+    }
 
-  <!-- JAPANESE -->
-  <div class="lang lang-jp">
-    <h1>声を大切にする場所</h1>
-    <p class="tagline">
-      VSingerのためのプライベートな創作拠点。<br>
-      信頼、芸術性、そして安心を軸に。
-    </p>
-
-    <section>
-      <h2>この場所について</h2>
-      <p>
-        ÉTOILEは、VSingerを中心とした
-        クリエイティブハウスです。
-        声と音楽を最優先に考えています。
-      </p>
-    </section>
-
-    <section>
-      <h2>関心・応援メッセージ</h2>
-      <form>
-        <input type="text" placeholder="お名前（任意）">
-        <input type="email" placeholder="メール（任意）">
-        <textarea placeholder="メッセージ"></textarea>
-        <button type="submit">送信</button>
-      </form>
-
-      <p class="note">
-        声を急がせることはありません。<br>
-        適切なタイミングで、耳を傾けます。
-      </p>
-    </section>
-  </div>
-
-</main>
-
-<script>
-  function setLang(lang) {
-    document.querySelectorAll('.lang').forEach(el => {
-      el.style.display = 'none';
-    });
-    document.querySelector('.lang-' + lang).style.display = 'block';
-  }
-  setLang('en');
-</script>
+    // Default language
+    switchLang("en");
+  </script>
 
 </body>
 </html>
