@@ -8,9 +8,9 @@
 body {
   color: white;
   background: black;
+  min-height: 100vh;
 }
 
-/* Background Video */
 .bg-video {
   position: fixed;
   inset: 0;
@@ -20,94 +20,65 @@ body {
   z-index: -2;
 }
 
-/* Overlay */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   z-index: -1;
 }
 
-/* Header */
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 2rem;
+  align-items: center;
+  padding: 20px;
 }
 
 .logo {
-  height: 48px;
+  height: 40px;
 }
 
 nav a {
-  margin-right: 1.5rem;
+  margin-right: 20px;
   color: white;
   text-decoration: none;
-  opacity: 0.85;
-}
-
-nav a:hover {
-  opacity: 1;
 }
 
 .lang-switch button {
+  margin-left: 10px;
   background: transparent;
   border: 1px solid white;
   color: white;
-  padding: 0.4rem 0.8rem;
-  margin-left: 0.5rem;
+  padding: 6px 12px;
   cursor: pointer;
 }
 
-/* Hero */
-.hero {
-  padding: 6rem 2rem 3rem;
-  max-width: 700px;
+main {
+  padding: 80px 20px;
+  max-width: 900px;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.85;
+.about, .form {
+  margin-top: 60px;
 }
 
-/* About */
-.about {
-  padding: 3rem 2rem;
-  max-width: 700px;
-}
-
-.about h2 {
-  margin-bottom: 1rem;
-}
-
-/* Form */
-.form-section {
-  padding: 3rem 2rem 5rem;
-  max-width: 700px;
-}
-
-.form-section form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-section input,
-.form-section textarea {
-  margin-bottom: 1rem;
-  padding: 0.8rem;
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
   background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.3);
+  border: none;
   color: white;
 }
 
-.form-section button {
-  padding: 0.8rem;
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 12px;
   background: white;
   color: black;
   border: none;
